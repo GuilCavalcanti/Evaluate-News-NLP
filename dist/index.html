@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+    </head>
+    <body>
+        <header>  
+            <div>
+                <h1>Article Polarity Evaluator</h1>
+            </div>
+        </header>
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Enter Articles's URL">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            </section>
+            <section>
+                <div class="results-hd">Form Results:</div>
+                <div class="results" id="results-1"></div>
+                <div class="results" id="results-2"></div>
+            </section>
+        </main>
+        <footer>
+            <p></p>
+        </footer>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function(error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+            }
+        </script>
+    <script type="text/javascript" src="main.js"></script></body>
+</html>
